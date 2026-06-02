@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: Crown1
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    buildpacks:
+      - url: render/python
+      - url: https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
+
